@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deep Patel</title>
+        <link rel="stylesheet" href="css/master.css" media="screen">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="max-width">
+                <!-- <div class="logo"><a href="#"><img src="./images/black_Logo.svg" alt=""></a></div> -->
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Models</a></li>
+                    <li><a href="contact.html">Inquiry</a></li>
+                </ul>
+            </div>
+            <div class="burgerMenu activeBurger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+        </nav>
+
+        <main id="app">
+            <section class="container">
+                <div class="thumbnails">
+                    <thumnail-card v-for="item in carModels" :item="item" :key="item.id"></thumnail-card>
+                    <!-- <img @click="logClicked" src="images/mini_1.png" alt="">
+                    <img @click="logClicked" src="images/mini_2.png" alt="">
+                    <img @click="logClicked" src="images/mini_3.png" alt=""> -->
+                </div>
+                <div class="carContent">
+                    <h2>Car Model Name</h2>
+                    <!-- <p>{{ message }}</p> -->
+                    <img src="images/mini_1.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum voluptates magnam aliquid fugit 
+                        maiores nobis cum, vitae laboriosam esse voluptas ducimus facilis accusamus necessitatibus totam 
+                        deleniti reprehenderit aperiam aut est suscipit praesentium autem sed nesciunt sint sit. Adipisci 
+                        laudantium fugit sed eum totam mollitia, quis voluptas rerum nemo. Exercitationem, 
+                        eveniet. Eos tempore officia molestiae ipsa doloribus quidem, quia unde harum?
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

@@ -6,10 +6,11 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
     Vue.component("thumnail-card", {
 
         props:["item"],
-        template:`<img :src="'images/'item.images" alt="item.images">`,
+        template:`<img :src="'images/' + item.images" alt="item images">`,
 
         mounted:function(){
             console.log(`loaded a ${this.item.name}'s image`);
+            console.log(`${this.item.images}`);
         }
     });
 

@@ -30,20 +30,19 @@
             <section class="container">
                 <div class="thumbnails">
                     <thumnail-card v-for="item in carModels" :item="item" :key="item.id"></thumnail-card>
-                    <!-- <img @click="logClicked" src="images/mini_1.png" alt="">
-                    <img @click="logClicked" src="images/mini_2.png" alt="">
-                    <img @click="logClicked" src="images/mini_3.png" alt=""> -->
                 </div>
-                <div class="carContent">
-                    <h2>Car Model Name</h2>
-                    <!-- <p>{{ message }}</p> -->
+                <div class="carContent" :class="{'show-bio' : show_bio_data}">
+                    <h2>akshkahs{{ currentModelData.name }}</h2>
+                    <p>{{ currentModelData.about }}</p>
+                    
+                    <!-- <h2>Car Model Name</h2>
                     <img src="images/mini_1.png" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum voluptates magnam aliquid fugit 
                         maiores nobis cum, vitae laboriosam esse voluptas ducimus facilis accusamus necessitatibus totam 
                         deleniti reprehenderit aperiam aut est suscipit praesentium autem sed nesciunt sint sit. Adipisci 
                         laudantium fugit sed eum totam mollitia, quis voluptas rerum nemo. Exercitationem, 
                         eveniet. Eos tempore officia molestiae ipsa doloribus quidem, quia unde harum?
-                    </p>
+                    </p> -->
                 </div>
             </section>
         </main>

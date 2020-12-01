@@ -1,4 +1,4 @@
-# My Favourite Things
+# Mini Cooper App
 
 ### About
 

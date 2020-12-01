@@ -29,21 +29,12 @@
         <main id="app">
             <section class="container">
                 <div class="thumbnails">
-                    <thumnail-card v-for="item in carModels" :item="item" :key="item.id"></thumnail-card>
+                    <thumnail-card @showmydata="thumbSelected" v-for="item in carModels" :item="item" :key="item.id"></thumnail-card>
                 </div>
-                <div class="carContent">
-                    <!-- <h2>{{ currentModelData.name }}</h2>
-                        :class="{'show-data' : show_bio_data}"
-                    <p>{{ currentModelData.about }}</p> -->
-                    
-                        <h2>Car Model Name</h2>
-                        <img src="images/mini_1.png" alt="">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum voluptates magnam aliquid fugit 
-                            maiores nobis cum, vitae laboriosam esse voluptas ducimus facilis accusamus necessitatibus totam 
-                            deleniti reprehenderit aperiam aut est suscipit praesentium autem sed nesciunt sint sit. Adipisci 
-                            laudantium fugit sed eum totam mollitia, quis voluptas rerum nemo. Exercitationem, 
-                            eveniet. Eos tempore officia molestiae ipsa doloribus quidem, quia unde harum?
-                        </p>
+                <div class="carContent hideContent" :class="{'show-data' : show_bio_data}">    
+                        <h2>{{ currentModelData.name }}</h2>
+                        <img :src="'images/' + currentModelData.images" alt="">
+                        <p>{{ currentModelData.about }}</p>
                 </div>
             </section>
         </main>

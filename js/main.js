@@ -7,19 +7,16 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
     Vue.component("thumnail-card", {
 
         props:["item"],
-        template:`<img @click="thumbSelected(item)" :src="'images/' + item.images" alt="item images">`,
+        template:`<img @click="logClicked" :src="'images/' + item.images" alt="item images">`,
 
         mounted:function(){
             console.log(`loaded a ${this.item.name}'s image`);
-            // console.log(`${this.item.images}`);
         },
 
         methods:{
-            thumbSelected(item){
-                console.log("Thumbnail Selected: ", item.name);
-                this.show_bio_data = this.show_bio_data ? false:true;
-                this.currentModelData = item;
-                // console.log("CURRENT : ", this.currentModelData.images);
+            logClicked(){
+                console.log("Image Clicked ", this.item.name);
+                this.$emit("showmydata", this.item);
             }
         }
     });
@@ -50,8 +47,12 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
 
         methods:
         {
-            logClicked(){
-                console.log("Image Clicked ", this.currentModelData);
+
+            thumbSelected(item){
+                console.log("Thumbnail Selected: ", item.name);
+                this.show_bio_data = this.show_bio_data ? false:true;
+                this.currentModelData = item;
+                // console.log("CURRENT : ", this.currentModelData.images);
             }
         }
 

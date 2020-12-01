@@ -19,8 +19,13 @@
     display: block;
 }
 
+.thumbnails img{
+    transition: all 0.5s ease;
+}
+
 .thumbnails img:hover{
     cursor: pointer;
+    transform: scale(0.95);
 }
 
 .carContent{
@@ -39,6 +44,7 @@
         font-size: 50px;
         text-transform: uppercase;
         font-weight: 800;
+        color: crimson;
     }
 
     p{
@@ -96,7 +102,7 @@
     
         h2{
             font-family: 'Roboto', sans-serif;
-            font-size: 30px;
+            font-size: 20px;
             text-transform: uppercase;
             font-weight: 600;
             

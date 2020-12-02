@@ -30,7 +30,7 @@
         <main id="app">
             <section class="container">
                 <div class="thumbnails">
-                    <thumnail-card @showmydata="thumbSelected" v-for="item in carModels" :item="item" :key="item.id"></thumnail-card>
+                    <thumnail-card @showmydata="thumbSelected" v-for="item in carModels"v-on:change="process(item)" :item="item" :key="item.id"></thumnail-card>
                 </div>
                 <div class="carContent hideContent" :class="{'show-data' : show_bio_data}">    
                         <h2>{{ currentModelData.name }}</h2>

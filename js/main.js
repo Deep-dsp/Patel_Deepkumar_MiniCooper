@@ -50,7 +50,8 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
 
             thumbSelected(item){
                 console.log("Thumbnail Selected: ", item.name);
-                this.show_bio_data = this.show_bio_data ? false:true;
+                // this.show_bio_data = this.show_bio_data ? false:true;
+                this.show_bio_data = true;
                 this.currentModelData = item;
                 // console.log("CURRENT : ", this.currentModelData.images);
             }

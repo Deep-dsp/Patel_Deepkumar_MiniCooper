@@ -6,6 +6,7 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
 
     Vue.component("thumnail-card", {
 
+        dataHide:true,
         props:["item"],
         template:`<img @click="logClicked" :src="'images/' + item.images" alt="item images">`,
 
@@ -16,6 +17,7 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
         methods:{
             logClicked(){
                 console.log("Image Clicked ", this.item.name);
+                this.dataHide = false;
                 this.$emit("showmydata", this.item);
             }
         }
@@ -24,7 +26,9 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
     let vue_em = new Vue({
 
         data:{
-            message: "Hello Vue!",
+            
+            text: "click on images for more details",
+            message:"Enjoy The Ride",
             removeAFormat:true,
             show_bio_data: false,
 
@@ -52,6 +56,7 @@ import { fetchData, postData } from "./modules/TheDataMiner.js";
                 console.log("Thumbnail Selected: ", item.name);
                 // this.show_bio_data = this.show_bio_data ? false:true;
                 this.show_bio_data = true;
+                this.removeAFormat = false;
                 this.currentModelData = item;
                 // console.log("CURRENT : ", this.currentModelData.images);
             }
